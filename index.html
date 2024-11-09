@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Presentation: JSON vs XML</title>
+
+    <style>
+        body {
+            display: block;
+            background-color: white;
+            font-family: "MontserratBold",Helvetica,Arial,sans-serif;
+        }
+        h1 {
+            padding: 15px;
+            font-size: 1.0rem;
+        }
+        h2 {
+            margin: .1em;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        p {
+            margin: .1em;
+            font-size: 0.9em;
+        }
+        header {
+            display: flex;
+        }
+        footer {
+            display: block;
+            justify-content: center;
+            text-align: center; 
+        }
+        .shadowbox {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            background-color: rgb(0, 76, 118);
+            padding: 15px;
+            border-radius: 5px;
+            margin: auto;
+            align-items: center;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 15px 0 rgba(0, 0, 0, 0.19);  
+        }
+        img {
+            padding: 0px;
+            width: 100px;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 15px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #lastupdated {
+            color: rgb(238, 234, 16);
+            font-size: 0.9em;
+        }
+
+        ul, #myUL {
+            list-style-type: none;
+        }
+        
+        #myUL {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .caret {
+            cursor: pointer;
+            -webkit-user-select: none; /* Safari 3.1+ */
+            -moz-user-select: none; /* Firefox 2+ */
+            -ms-user-select: none; /* IE 10+ */
+            user-select: none;
+        }
+        
+        .caret::before {
+            content: "\25B6";
+            color: black;
+            display: inline-block;
+            margin-right: 6px;
+        }
+        
+        .caret-down::before {
+            -ms-transform: rotate(90deg); /* IE 9 */
+            -webkit-transform: rotate(90deg); /* Safari */'
+            transform: rotate(90deg);  
+        }
+        
+        .nested {
+          display: none;
+        }
+        
+        .active {
+          display: block;
+        }
+        </style>
+</head>
+<body>
+    <header class="shadowbox">
+        <h2>Contrato No. 645014810</h2>
+        <p>Servicios especializados para la administración del mantenimiento de instalaciones y ductos en los activos de producción región sur</p>
+    </header>
+    <main>
+        
+        <ul>  Documentos
+            <ul id="myUL">
+                <li><span class="caret">Entregables</span>
+                    <ul class="nested">
+
+                        <ul id="myUL">
+                            <li><span class="caret">Agosto</span>
+                                <ul class="nested">
+
+                                    <ul id="myUL">
+                                        <li><span class="caret">FML</span>
+                                            <ul class="nested">
+
+                                                <li><a href="https://1drv.ms/w/c/a181dda3d8fb1bd9/EUEWUPWfBThNrXD_BpimUaoBX-qoZj-9wx8KL_y9qURhbQ?e=pxGjdh" target="_blank">Reportes Diarios</a></li>
+                                                <li><a href="https://1drv.ms/w/c/a181dda3d8fb1bd9/Eb70_sSdGzNKseNDfxlVV0cB4JQcUnmI8a15Ymgp8zM2ow?e=K8k5TX" target="_blank">Informe Técnico</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul id="myUL">
+                                        <li><span class="caret">AMVM</span>
+                                            <ul class="nested">
+
+                                                <li><a href="#" target="_blank">Reportes Diarios (habilitándose)</a></li>
+                                                <li><a href="#" target="_blank">Reporte Mensual (habilitándose)</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul id="myUL">
+                                        <li><span class="caret">FSO</span>
+                                            <ul class="nested">
+
+                                                <li><a href="https://1drv.ms/w/c/a181dda3d8fb1bd9/EdK4miiiTk1AuR0QmXDHq_oBf5m1dY4-lp0GbFSDiUhAqQ?e=AfUyjm" target="_blank">Reportes Diarios</a></li>
+                                                <li><a href="https://1drv.ms/w/c/a181dda3d8fb1bd9/EbrYgS-jqltFpDo2uyisjxcBWKbvl_L4Yo2yZJRQ72bGkQ?e=7ogZJS" target="_blank">Reporte Mensual</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul id="myUL">
+                                        <li><span class="caret">GOS</span>
+                                            <ul class="nested">
+
+                                                <li><a href="#" target="_blank">Reportes Diarios (habilitándose)</a></li>
+                                                <li><a href="#" target="_blank">Reporte Mensual (habilitándose)</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                </ul>  
+                            </li> 
+                        </ul>    
+
+                        <ul id="myUL">
+                            <li><span class="caret">Septiembre</span>
+                                <ul class="nested">
+
+                                    <ul id="myUL">
+                                        <li><span class="caret">FML</span>
+                                            <ul class="nested">
+
+                                                <li><a href="#" target="_blank">Reportes Diarios (habilitándose)</a></li>
+                                                <li><a href="#" target="_blank">Reporte Mensual (habilitándose)</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul id="myUL">
+                                        <li><span class="caret">AMVM</span>
+                                            <ul class="nested">
+
+                                                <li><a href="#" target="_blank">Reportes Diarios (habilitándose)</a></li>
+                                                <li><a href="#" target="_blank">Reporte Mensual (habilitándose)</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul id="myUL">
+                                        <li><span class="caret">FSO</span>
+                                            <ul class="nested">
+
+                                                <li><a href="#" target="_blank">Reportes Diarios (habilitándose)</a></li>
+                                                <li><a href="#" target="_blank">Reporte Mensual (habilitándose)</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul id="myUL">
+                                        <li><span class="caret">GOS</span>
+                                            <ul class="nested">
+
+                                                <li><a href="#" target="_blank">Reportes Diarios (habilitándose)</a></li>
+                                                <li><a href="#" target="_blank">Reporte Mensual (habilitándose)</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                </ul>  
+                            </li> 
+                        </ul>  
+
+                        <ul id="myUL">
+                            <li><span class="caret">Octubre</span>
+                                <ul class="nested">
+
+                                    <ul id="myUL">
+                                        <li><span class="caret">FML</span>
+                                            <ul class="nested">
+
+                                                <li><a href="#" target="_blank">Reportes Diarios (habilitándose)</a></li>
+                                                <li><a href="#" target="_blank">Reporte Mensual (habilitándose)</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul id="myUL">
+                                        <li><span class="caret">AMVM</span>
+                                            <ul class="nested">
+
+                                                <li><a href="#" target="_blank">Reportes Diarios (habilitándose)</a></li>
+                                                <li><a href="#" target="_blank">Reporte Mensual (habilitándose)</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul id="myUL">
+                                        <li><span class="caret">FSO</span>
+                                            <ul class="nested">
+
+                                                <li><a href="#" target="_blank">Reportes Diarios (habilitándose)</a></li>
+                                                <li><a href="#" target="_blank">Reporte Mensual (habilitándose)</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul id="myUL">
+                                        <li><span class="caret">GOS</span>
+                                            <ul class="nested">
+
+                                                <li><a href="#" target="_blank">Reportes Diarios (habilitándose)</a></li>
+                                                <li><a href="#" target="_blank">Reporte Mensual (habilitándose)</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                </ul>  
+                            </li> 
+                        </ul>  
+
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="myUL">
+                <li><span class="caret">PTEs</span>
+                    <ul class="nested">
+
+                        <ul id="myUL">
+                            <li><span class="caret">Agosto</span>
+                                <ul class="nested">
+
+
+                                    <li><a href="https://1drv.ms/w/c/a181dda3d8fb1bd9/EeaGBsZ3duxGl1r95SfL_jcBlqwmg9jZ8c5MkNq3S7lYBA?e=Rk1a9Q" target="_blank">01-PTE-APSL-001</a></li>
+                                    <li><a href="https://1drv.ms/w/c/a181dda3d8fb1bd9/EUyWyQiuTnFKu8r26WcjnOoByy7OKkSXPcLMp0FRiPBrvg?e=2eWuH4" target="_blank">02-PTE-APSL-002 </a></li>
+                                    <li><a href="#" target="_blank">03-PTE (habilitándose)</a></li> 
+                                    <li><a href="#" target="_blank">04-PTE (habilitándose)</a></li> 
+                                    <li><a href="#" target="_blank">05-PTE (habilitándose)</a></li> 
+                                    <li><a href="#" target="_blank">06-PTE (habilitándose)</a></li> 
+                                    <li><a href="#" target="_blank">07-PTE (habilitándose)</a></li> 
+                                    <li><a href="#" target="_blank">08-PTE (habilitándose)</a></li>
+
+
+
+                                </ul>  
+                            </li> 
+                        </ul>    
+
+                        <ul id="myUL">
+                            <li><span class="caret">Septiembre</span>
+                                <ul class="nested">
+
+
+
+                                    <li><a href="#" target="_blank">09-PTE (habilitándose)</a></li> 
+                                    <li><a href="#" target="_blank">10-PTE (habilitándose)</a></li>    
+                                    <li><a href="#" target="_blank">11-PTE (habilitándose)</a></li>            
+                                    <li><a href="#" target="_blank">12-PTE (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">13-PTE (habilitándose)</a></li>    
+                                    <li><a href="#" target="_blank">14-PTE (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">15-PTE (habilitándose)</a></li>    
+                                    <li><a href="#" target="_blank">16-PTE (habilitándose)</a></li>  
+
+
+                                </ul>  
+                            </li> 
+                        </ul>  
+
+                        <ul id="myUL">
+                            <li><span class="caret">Octubre</span>
+                                <ul class="nested">
+
+                                    <ul id="myUL">
+
+
+
+                                        <li><a href="#" target="_blank">17-PTE (habilitándose)</a></li> 
+                                        <li><a href="#" target="_blank">18-PTE (habilitándose)</a></li>    
+                                        <li><a href="#" target="_blank">19-PTE (habilitándose)</a></li>            
+                                        <li><a href="#" target="_blank">20-PTE (habilitándose)</a></li>
+                                        <li><a href="#" target="_blank">21-PTE (habilitándose)</a></li>    
+                                        <li><a href="#" target="_blank">22-PTE (habilitándose)</a></li>
+                                        <li><a href="#" target="_blank">23-PTE (habilitándose)</a></li>    
+                                        <li><a href="#" target="_blank">24-PTE (habilitándose)</a></li> 
+
+
+
+                                </ul>  
+                            </li> 
+                        </ul>  
+
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="myUL">
+                <li><span class="caret">Estimaciones</span>
+                    <ul class="nested">
+
+                        <ul id="myUL">
+                            <li><span class="caret">Agosto</span>
+                                <ul class="nested">
+
+
+                                    <li><a href="#" target="_blank">ESTIMACION 01 (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">ESTIMACION 02 (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">ESTIMACION 03 (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">ESTIMACION 04 (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">ESTIMACION 05 (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">ESTIMACION 06 (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">ESTIMACION 07 (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">ESTIMACION 08 (habilitándose)</a></li>
+
+
+
+                                </ul>  
+                            </li> 
+                        </ul>    
+
+                        <ul id="myUL">
+                            <li><span class="caret">Septiembre</span>
+                                <ul class="nested">
+
+
+
+                                    <li><a href="#" target="_blank">ESTIMACION 09 (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">ESTIMACION 10 (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">ESTIMACION 11 (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">ESTIMACION 12 (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">ESTIMACION 13 (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">ESTIMACION 14 (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">ESTIMACION 15 (habilitándose)</a></li>
+                                    <li><a href="#" target="_blank">ESTIMACION 16 (habilitándose)</a></li> 
+
+
+                                </ul>  
+                            </li> 
+                        </ul>  
+
+                        <ul id="myUL">
+                            <li><span class="caret">Octubre</span>
+                                <ul class="nested">
+
+                                    <ul id="myUL">
+
+
+                                        <li><a href="#" target="_blank">ESTIMACION 17 (habilitándose)</a></li>
+                                        <li><a href="#" target="_blank">ESTIMACION 18 (habilitándose)</a></li>
+                                        <li><a href="#" target="_blank">ESTIMACION 19 (habilitándose)</a></li>
+                                        <li><a href="#" target="_blank">ESTIMACION 20 (habilitándose)</a></li>
+                                        <li><a href="#" target="_blank">ESTIMACION 21 (habilitándose)</a></li>
+                                        <li><a href="#" target="_blank">ESTIMACION 22 (habilitándose)</a></li>
+                                        <li><a href="#" target="_blank">ESTIMACION 23 (habilitándose)</a></li>
+                                        <li><a href="#" target="_blank">ESTIMACION 24 (habilitándose)</a></li>  
+
+
+
+                                </ul>  
+                            </li> 
+                        </ul>  
+
+                    </ul>
+                </li>
+            </ul>
+
+        </ul>
+    </main>
+    <footer class="shadowbox">
+    <div>    
+        <p>
+            &copy; <span id="currentyear"></span> | DIAPSA |
+            <span id="lastupdated"></span>
+          </p>
+    </div>
+  </footer>
+    <script>
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+        let date = new Date();
+        let year = date.getFullYear();
+
+        document.getElementById('currentyear').innerHTML = year;
+        document.getElementById('lastupdated').textContent = `Last updated: ${document.lastModified}`;
+        
+        for (i = 0; i < toggler.length; i++) {
+        toggler[i].addEventListener("click", function() {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.classList.toggle("caret-down");
+        });
+        }
+    </script>
+</body>
+</html>
