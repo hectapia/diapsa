@@ -4,9 +4,9 @@
     --primaryColor1: rgb(0, 76, 118);
     --white: #ffffff;
     --breakingColor: rgb(0, 76, 118);
-    --linkButtonPrimaryColor: #3793ab;
+    --linkButtonPrimaryColor: rgb(0, 76, 118); /* #3793ab */
     --linkButtonSecondaryColor: var(--white);
-    --linkButtonHoverColor: #065577;
+    --linkButtonHoverColor: #3793ab; /* rgb(0, 76, 118) */
 }
 
 .PageLogo-image {
@@ -14,9 +14,9 @@
 }
 
 .RichTextBody {
-    font-size: 1.3rem;
+    /*font-size: 1.3rem;*/
     font-family: var(--bodyFont), Arial, Helvetica, sans-serif;
-    line-height: 1.3;
+    /*line-height: 1.3;*/
     color: #636466;
     max-width: 1296px;
     margin: 0 auto;
@@ -30,10 +30,10 @@
 .duRjpb {
     color: rgba(26,115,232,1);
     font-family: 'PT Sans', sans-serif;
-    font-size: 34pt;
+    /*font-size: 34pt;
     font-weight: 700;
     letter-spacing: -0.5px;
-    line-height: 1.2;
+    line-height: 1.2;*/
 }
 
 
@@ -41,10 +41,7 @@
 padding: 0 30px;
 }
 
-.RichTextBody p, th, td {
-    line-height: 22px;
-    margin: 1.5em 0;
-}
+
 
 .RichTextBody>ul,
 .RichTextBody>ul li>ul,
@@ -53,6 +50,17 @@ padding: 0 30px;
     list-style: disc;
     padding: 0 0 0 40px;
     margin: 0 20px 0;
+}
+
+.RichTextBody th, td {
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+
+.RichTextBody p{
+ margin-top: 1.75rem;
+ margin-bottom: 0.5rem;
+ line-height: 1.25rem;
 }
 
 .PromoLedeL3-title {
@@ -76,10 +84,7 @@ padding: 0 30px;
     background-color: var(--breakingColor);
 }
 
-.RichTextBody p, th, td {
-    font-size: 1rem;
-    line-height: 25px;
-}
+
 
 .sticky {
     position: fixed;
@@ -172,6 +177,7 @@ content: "\2212";
 
 .cms-Headings-H2 {
     padding: 0px;
+    font-size: 1rem;
 }
 
 .themes {
