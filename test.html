@@ -5,88 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .list-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
-        td {
-            border: 1px solid #000;
-            padding: 10px;
-            text-align: center;
-            position: relative;
+        .click-link {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 20px;
+            margin: 10px;
         }
 
-        #hover-message {
+        #click-content-container {
             display: none;
-            position: absolute;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             background-color: #f9f9f9;
             border: 1px solid #ccc;
-            padding: 5px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            pointer-events: none;
+        }
+
+        #click-content-container ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #click-content-container li {
+            padding: 5px 0;
         }
     </style>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th class="hover-header" data-message="Table 1, Header 1 message">Header 1</th>
-                <th class="hover-header" data-message="Table 1, Header 2 message">Header 2</th>
-                <th class="hover-header" data-message="Table 1, Header 3 message">Header 3</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table>
-        <thead>
-            <tr>
-                <th class="hover-header" data-message="Table 2, Header 1 message">Header 1</th>
-                <th class="hover-header" data-message="Table 2, Header 2 message">Header 2</th>
-                <th class="hover-header" data-message="Table 2, Header 3 message">Header 3</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div id="hover-message"></div>
+    <div class="list-links">
+        <a href="#" class="click-link" data-items="Link 1,https://example.com,Link 2,https://example.com">Click me 1</a>
+        <a href="#" class="click-link" data-items="Link A,https://example.com,Link B,https://example.com,Link C,https://example.com,Link D,https://example.com">Click me 2</a>
+        <a href="#" class="click-link" data-items="Link X,https://example.com,Link Y,https://example.com,Link Z,https://example.com">Click me 3</a>
+    </div>
+    <div id="click-content-container"></div>
 
       <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const hoverHeaders = document.querySelectorAll('.hover-header');
-            const hoverMessage = document.getElementById('hover-message');
+            const clickLinks = document.querySelectorAll('.click-link');
+            const clickContentContainer = document.getElementById('click-content-container');
 
-            hoverHeaders.forEach(header => {
-                header.addEventListener('mouseover', function(event) {
-                    const message = header.getAttribute('data-message');
-                    hoverMessage.textContent = message;
-                    hoverMessage.style.display = 'block';
-                    hoverMessage.style.left = event.pageX + 'px';
-                    hoverMessage.style.top = event.pageY + 'px';
+            clickLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const items = link.getAttribute('data-items').split(',');
+                    let listItems = '';
+                    for (let i = 0; i < items.length; i += 2) {
+                        listItems += `<li><a href="${items[i + 1]}" target="_blank">${items[i]}</a></li>`;
+                    }
+                    clickContentContainer.innerHTML = `<ul>${listItems}</ul>`;
+                    clickContentContainer.style.display = 'block';
                 });
+            });
 
-                header.addEventListener('mousemove', function(event) {
-                    hoverMessage.style.left = event.pageX + 'px';
-                    hoverMessage.style.top = event.pageY + 'px';
-                });
-
-                header.addEventListener('mouseout', function() {
-                    hoverMessage.style.display = 'none';
-                });
+            document.addEventListener('click', function(event) {
+                if (!clickContentContainer.contains(event.target) && !Array.from(clickLinks).includes(event.target)) {
+                    clickContentContainer.style.display = 'none';
+                }
             });
         });
       </script>
