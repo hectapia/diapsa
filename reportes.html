@@ -630,7 +630,7 @@
         <div>
             <span class="Anchor" id="career-development"></span>
             <div class="RichTextBody">
-                <button class="collapsible"><h2 class="cms-Headings-H2">APSL Estimación 1</h2></button>
+                <button class="collapsible"><h2 class="cms-Headings-H2">APSL Estimación 15</h2></button>
                 <div class="themes" style="background-color: #f1f2f2;">
 
                     <table>
@@ -643,9 +643,25 @@
                         <tbody>
                             <!-- Rows 1 to 16 -->
                             <tr>
-                                <td>EC Cunduacán</a></td>
-                                <td><a href="#" target="_blank">1</a></td>
-
+                                <!-- Example for Row 1 -->
+                                    <td>EC Cunduacán</a></td>
+                                    <td>
+                                        <div class="list-links">
+                                            <a href="#" class="click-link" data-items="Reporte PDF,https://1drv.ms/b/c/A181DDA3D8FB1BD9/AemAiTflTkZNmeM25ERCxS0?e=8ABicj,
+                                            Reporte Editable,https://1drv.ms/w/c/A181DDA3D8FB1BD9/AYefITgPLjdJoWJge82FUQ4?e=Fn5nf4,
+                                            Anexo 4,https://example.com,
+                                            Anexo 5,https://example.com,
+                                            Anexo 6,https://example.com,
+                                            Anexo 7,https://example.com,
+                                            Anexo 8,https://example.com,
+                                            Anexo 9,https://example.com,
+                                            Anexo 10,https://example.com,
+                                            Anexo 11,https://example.com
+                                            ">
+                                                1
+                                            </a>
+                                       </div>
+                                    </td>
                             </tr>
 
                         </tbody>
@@ -659,7 +675,7 @@
         <div>
             <span class="Anchor" id="career-development"></span>
             <div class="RichTextBody">
-                <button class="collapsible"><h2 class="cms-Headings-H2">APSL Estimación 2</h2></button>
+                <button class="collapsible"><h2 class="cms-Headings-H2">APSL Estimación 16</h2></button>
                 <div class="themes" style="background-color: #f1f2f2;">
 
                     <table>
@@ -1210,88 +1226,88 @@
     <hr>
 </footer>
 
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight){
-        content.style.maxHeight = null;
-        } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-        } 
-    });
-    }
-
-
-        var toggler = document.getElementsByClassName("caret");
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
         var i;
-        let date = new Date();
-        let year = date.getFullYear();
 
-        document.getElementById('currentyear').innerHTML = year;
-        document.getElementById('lastupdated').textContent = `Last updated: ${document.lastModified}`;
-        
-        for (i = 0; i < toggler.length; i++) {
-        toggler[i].addEventListener("click", function() {
-            this.parentElement.querySelector(".nested").classList.toggle("active");
-            this.classList.toggle("caret-down");
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+            content.style.maxHeight = null;
+            } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            } 
         });
         }
 
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const hoverHeaders = document.querySelectorAll('.hover-header');
-            const hoverMessage = document.getElementById('hover-message');
+            var toggler = document.getElementsByClassName("caret");
+            var i;
+            let date = new Date();
+            let year = date.getFullYear();
 
-            hoverHeaders.forEach(header => {
-                header.addEventListener('mouseover', function(event) {
-                    const message = header.getAttribute('data-message');
-                    hoverMessage.textContent = message;
-                    hoverMessage.style.display = 'block';
-                    hoverMessage.style.left = event.pageX + 'px';
-                    hoverMessage.style.top = event.pageY + 'px';
-                });
-
-                header.addEventListener('mousemove', function(event) {
-                    hoverMessage.style.left = event.pageX + 'px';
-                    hoverMessage.style.top = event.pageY + 'px';
-                });
-
-                header.addEventListener('mouseout', function() {
-                    hoverMessage.style.display = 'none';
-                });
+            document.getElementById('currentyear').innerHTML = year;
+            document.getElementById('lastupdated').textContent = `Last updated: ${document.lastModified}`;
+            
+            for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function() {
+                this.parentElement.querySelector(".nested").classList.toggle("active");
+                this.classList.toggle("caret-down");
             });
-        });  
+            }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const clickLinks = document.querySelectorAll('.click-link');
-            const clickContentContainer = document.getElementById('click-content-container');
 
-            clickLinks.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const items = link.getAttribute('data-items').split(',');
-                    let listItems = '';
-                    for (let i = 0; i < items.length; i += 2) {
-                        listItems += `<li><a href="${items[i + 1]}" target="_blank">${items[i]}</a></li>`;
+            document.addEventListener('DOMContentLoaded', function() {
+                const hoverHeaders = document.querySelectorAll('.hover-header');
+                const hoverMessage = document.getElementById('hover-message');
+
+                hoverHeaders.forEach(header => {
+                    header.addEventListener('mouseover', function(event) {
+                        const message = header.getAttribute('data-message');
+                        hoverMessage.textContent = message;
+                        hoverMessage.style.display = 'block';
+                        hoverMessage.style.left = event.pageX + 'px';
+                        hoverMessage.style.top = event.pageY + 'px';
+                    });
+
+                    header.addEventListener('mousemove', function(event) {
+                        hoverMessage.style.left = event.pageX + 'px';
+                        hoverMessage.style.top = event.pageY + 'px';
+                    });
+
+                    header.addEventListener('mouseout', function() {
+                        hoverMessage.style.display = 'none';
+                    });
+                });
+            });  
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const clickLinks = document.querySelectorAll('.click-link');
+                const clickContentContainer = document.getElementById('click-content-container');
+
+                clickLinks.forEach(link => {
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const items = link.getAttribute('data-items').split(',');
+                        let listItems = '';
+                        for (let i = 0; i < items.length; i += 2) {
+                            listItems += `<li><a href="${items[i + 1]}" target="_blank">${items[i]}</a></li>`;
+                        }
+                        clickContentContainer.innerHTML = `<ul>${listItems}</ul>`;
+                        clickContentContainer.style.display = 'block';
+                    });
+                });
+
+                document.addEventListener('click', function(event) {
+                    if (!clickContentContainer.contains(event.target) && !Array.from(clickLinks).includes(event.target)) {
+                        clickContentContainer.style.display = 'none';
                     }
-                    clickContentContainer.innerHTML = `<ul>${listItems}</ul>`;
-                    clickContentContainer.style.display = 'block';
                 });
             });
 
-            document.addEventListener('click', function(event) {
-                if (!clickContentContainer.contains(event.target) && !Array.from(clickLinks).includes(event.target)) {
-                    clickContentContainer.style.display = 'none';
-                }
-            });
-        });
-
-</script>
+    </script>
 </body>
 
 </html>
