@@ -1,7 +1,7 @@
 // Create this as session-check.js
 function checkLoginSession() {
     if (!sessionStorage.getItem('loggedIn')) {
-        window.location.href = 'test.html'; // Redirect to login page if not logged in
+        window.location.href = '../index.html'; // Redirect to login page if not logged in
         return false;
     }
     return true;
