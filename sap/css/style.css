@@ -1,9 +1,19 @@
 
 body {
     display: block;
-    background-color: white;
+    background-color: black;
     font-family: "MontserratBold",Helvetica,Arial,sans-serif;
-}
+    background-image: url("/img/b-black-liquid-wave-luxury-premium-pattern-flying-into-digital-technologic-panorama-animation-3d.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}/*
+.back-img {
+    background-image: url("https://www.grupodiapsa.com.mx/wp-content/uploads/2023/08/black-liquid-wave-luxury-premium-pattern-flying-into-digital-technologic-panorama-animation-3d.jpg");
+    background-position: center center;
+    background-size: cover;
+}*/
 h1 {
     padding: 15px;
     font-size: 1.0rem;
@@ -27,14 +37,32 @@ footer {
 }
 .shadowbox {
     display: flex;
-    flex-direction: column;
-    color: white;
-    background-color: rgb(0, 76, 118);
+    flex-direction: row;
+    color: #cacdd9;
+    background-color: black;
     padding: 15px;
     border-radius: 5px;
+    border: 1px solid rgb(148, 145, 145);
     margin: auto;
     align-items: center;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 15px 0 rgba(0, 0, 0, 0.19);  
+}
+
+.shadowbox p {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.pageLogo-image {
+    width: 200px;
+    height: 45px;
+    margin-top: 16px;
+}
+
+@media only screen and (max-width: 750px) {
+    p{
+        display: none;
+        }
 }
 img {
     padding: 0px;
@@ -48,6 +76,9 @@ img {
     font-size: 0.9em;
 }
 
+ul {
+    color: #cacdd9;
+}
 ul, #myUL {
     list-style-type: none;
 }
@@ -67,14 +98,14 @@ ul, #myUL {
 
 .caret::before {
     content: "\25B6";
-    color: black;
+    color: #cacdd9;
     display: inline-block;
     margin-right: 6px;
 }
 
 .caret-down::before {
     -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Safari */'
+    -webkit-transform: rotate(90deg); /* Safari */
     transform: rotate(90deg);  
 }
 
@@ -84,4 +115,21 @@ ul, #myUL {
 
 .active {
   display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #00ffff;
+    font-size: 0.8rem;
+    margin: 4px;
+}
+
+a:hover {
+color: #ff00ff; /* magenta for hover state */
+text-decoration: underline;
+}
+
+ a:active {
+color: #55ff00c6; /* bright red when clicking */
+text-decoration: underline;
 }
