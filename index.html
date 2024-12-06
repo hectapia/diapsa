@@ -13,14 +13,25 @@
             height: 100vh;
             background-color: #f0f0f0;
         }
-
+        .back-img {
+            background-image: url("/img/b-black-liquid-wave-luxury-premium-pattern-flying-into-digital-technologic-panorama-animation-3d.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
         .container {
-            background-color: #fff;
+            background-color: #000;
+            border: 1px solid #c7c3c3;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
             text-align: center;
+        }
+
+        img {
+            width: 80%;
         }
 
         input {
@@ -42,7 +53,7 @@
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #2EACFF;
         }
 
         #message {
@@ -54,9 +65,9 @@
         }
     </style>
 </head>
-<body>
+<body class="back-img">
     <div class="container">
-        <h2>Log In</h2>
+        <img src="img/logo-diapsa-1-1.png" alt="logo-diapsa">
         <form id="login-form">
             <input type="text" id="login-username" placeholder="Username" required>
             <input type="password" id="login-password" placeholder="Password" required>
