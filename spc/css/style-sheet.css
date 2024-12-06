@@ -9,7 +9,6 @@
     --linkButtonHoverColor: #3793ab; /* rgb(0, 76, 118) */
 }
 
-
 .pageLogo-image {
     width: 200px;
     height: 45px;
@@ -58,8 +57,6 @@
 padding: 0 30px;
 }
 
-
-
 .RichTextBody>ul,
 .RichTextBody>ul li>ul,
 .RichTextBody p>ul,
@@ -95,12 +92,6 @@ font-size: 1rem;
     color: var(--white);
     border-radius: 4px;
 }
-/*
-.PromoLedeL3-title a:hover {
-    background-color: red;
-}*/
-
-
 
 .sticky {
     position: fixed;
@@ -111,10 +102,10 @@ font-size: 1rem;
 }
 
 .header-content{
- display: flex;
- margin: 0 auto;
- flex-direction: row;
- justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
 }
 
 hr {
@@ -137,9 +128,9 @@ hr {
 }
 
 @media only screen and (max-width: 490px) {
-.center p{
-font-size: 0.9rem;
-}
+    .center p{
+    font-size: 0.9rem;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -151,7 +142,7 @@ font-size: 0.9rem;
 @media only screen and (max-width: 750px) {
     p{
         display: none;
-        }
+    }
 }
 
 
@@ -188,17 +179,16 @@ font-size: 0.9rem;
 }
 
 .active, .collapsible:hover {
-background-color: var(--linkButtonHoverColor);
+    background-color: var(--linkButtonHoverColor);
 }
 
 .collapsible:after {
-content: '\002B';
-color: white;
-font-size: 15px;
-font-weight: bold;
-
-float: right;
-margin-left: 5px;
+    content: '\002B';
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
 }
 
 .active:after {
