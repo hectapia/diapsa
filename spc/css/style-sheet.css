@@ -76,6 +76,11 @@ margin-left: 10px;
 font-size: 1rem;
 }
 
+.RichTextBody .footer{
+    margin-left: 10px;
+    font-size: 0.8rem;
+    }
+
 .PromoLedeL3-title {
     display: flex;
 }
@@ -197,7 +202,9 @@ content: "\2212";
 
 .cms-Headings-H2 {
     padding: 0px;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .themes {
