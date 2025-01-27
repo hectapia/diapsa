@@ -66,11 +66,6 @@ padding: 0 30px;
     margin: 0 20px 0;
 }
 
-.RichTextBody th, td {
-    font-size: 0.8rem;
-    line-height: 1rem;
-}
-
 .RichTextBody p{
 margin-left: 10px;
 font-size: 1rem;
@@ -138,9 +133,15 @@ hr {
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 360px) {
     .center p{
     font-size: 0.8rem;
+    }
+    th, td  {
+        font-size: 0.7rem;
+    }
+    .click-link {
+        font-size: 0.7rem;
     }
 }
 
@@ -239,4 +240,88 @@ padding-left: 30px;
 #path-logo img {
 max-width: 100%;
 height: auto!important;
+}
+
+/* Path: -- */
+
+table, th, td {
+    border: 1px solid #e2dfdf;
+    border-collapse: collapse;
+} 
+th, td {
+    padding: 4px;
+    text-align: center;
+}
+
+th {
+    position: relative;
+}
+
+th, td {
+    font-size: 0.8rem;
+}
+
+#hover-message {
+    display: none;
+    position: absolute;
+    background-color: #e2dfdf;
+    border: 1px solid #bebebe;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    font-size: 0.65rem;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.list-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh;*/
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.click-link {
+    color: #00ffff;
+    font-size: 0.8rem;
+    margin: 4px;
+}
+
+a:hover {
+color: #ff00ff; /* magenta for hover state */
+text-decoration: underline;
+}
+
+ a:active {
+color: #55ff00c6; /* bright red when clicking */
+text-decoration: underline;
+}
+
+#click-content-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(174, 172, 172);
+    border: 1px solid magenta;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: var(--bodyFont);
+    font-size: 0.8rem;
+    z-index: 1000;
+}
+
+#click-content-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#click-content-container li {
+    padding: 5px 0;
 }
